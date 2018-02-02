@@ -8,7 +8,39 @@
 
 </head>
 <body>
+    
+    <form id="theForm">
+        <h3>INPUT A SONG/ARTIST/ALBUM!!</h3>
+        Song:<input id="songInput" type="text"><br>
+        Artist:<input id="artistInput" type="text"><br>
+        Album:<input id="albumInput" type="text"><br>
+        <button id="enter">ENTER!</button>
+    </form>
 
+    <div>
+        <h1>Songs:</h1>
+        <button id="sortSong">Sort</button>
+        <input id="sortSongA" type="radio" name="sortSongI">Sort Alphabetically Ascend
+        <input id="sortSongD" type="radio" name="sortSongI">Sort Alphabetically Descend
+        <div id="songOutput"></div>
+    </div>
+
+    <div>
+        <h1>Artists:</h1>
+        <button id="sortArtist">Sort</button>
+        <input id="sortArtistA" type="radio" name="sortArtistI">Sort Alphabetically Ascend
+        <input id="sortArtistD" type="radio" name="sortArtistI">Sort Alphabetically Descend
+        <div id="artistOutput"></div>
+    </div>
+
+
+    <div>
+        <h1>Albums:</h1>
+        <button id="sortAlbum">Sort</button>
+        <input id="sortAlbumA" type="radio" name="sortAlbumI">Sort Alphabetically Ascend
+        <input id="sortAlbumD" type="radio" name="sortAlbumI">Sort Alphabetically Descend
+        <div id="albumOutput"></div>
+    </div>
     
     <script src="main.js"></script>
 </body>
