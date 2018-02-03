@@ -84,5 +84,7 @@ let btnAlbumSort = document.getElementById("sortAlbum").addEventListener("click"
 
 // ===ENTER ITEM===
 function enterItem() {
-    if ()
-}
+    console.log("TEST");
+};
+
+let btnEnter = document.getElementById("enter").addEventListener("click", enterItem);
