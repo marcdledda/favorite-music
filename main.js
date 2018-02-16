@@ -68,7 +68,14 @@ function songSortFunc(){
     };
 };
 
-let btnSongSort = document.getElementById("sortSong").addEventListener("click", songSortFunc);
+function defaultSong(){
+    if(document.getElementById("songOutput").className == "horizontal"){
+        document.getElementById("songOutput").classList.remove("horizontal");
+    }
+    songSortFunc();
+}
+
+let btnSongSort = document.getElementById("sortSong").addEventListener("click", defaultSong);
 
 //
 // === ARTIST BUTTON ===
@@ -121,7 +128,14 @@ function artistSortFunc(){
     };
 };
 
-let btnArtistSort = document.getElementById("sortArtist").addEventListener("click", artistSortFunc);
+function defaultArtist(){
+    if(document.getElementById("artistOutput").className == "horizontal"){
+        document.getElementById("artistOutput").classList.remove("horizontal");
+    }
+    artistSortFunc();
+}
+
+let btnArtistSort = document.getElementById("sortArtist").addEventListener("click", defaultArtist);
 
 //
 // === ALBUM BUTTON ===
@@ -174,7 +188,14 @@ function albumSortFunc(){
     };
 };
 
-let btnAlbumSort = document.getElementById("sortAlbum").addEventListener("click", albumSortFunc);
+function defaultAlbum(){
+    if(document.getElementById("albumOutput").className == "horizontal"){
+        document.getElementById("albumOutput").classList.remove("horizontal");
+    }
+    albumSortFunc();
+}
+
+let btnAlbumSort = document.getElementById("sortAlbum").addEventListener("click", defaultAlbum);
 
 //
 // ===ENTER ITEM===
@@ -208,3 +229,51 @@ function enterItem() {
 
 let btnEnter = document.getElementById("enter").addEventListener("click", enterItem);
 
+//
+// ===CLASS CHANGE===
+//
+function classChange(){
+    if(document.getElementById("songOutput").className == "vertical"){
+        document.getElementById("songOutput").classList.add("horizontal")
+        document.getElementById("artistOutput").classList.add("horizontal")
+        document.getElementById("albumOutput").classList.add("horizontal")
+    }
+};
+function classDefault(){
+    if(document.getElementById("songOutput").className == "horizontal"){
+        document.getElementById("songOutput").classList.remove("horizontal")
+        document.getElementById("artistOutput").classList.remove("horizontal")
+        document.getElementById("albumOutput").classList.remove("horizontal")
+    }
+};
+
+//
+// ===HORIZONTAL===
+//
+
+function hSong(){
+    if(document.getElementById("songOutput").className !== "horizontal"){
+        document.getElementById("songOutput").classList.toggle("horizontal");
+    }
+    songSortFunc();
+};
+
+let btnHsong = document.getElementById("hsortSong").addEventListener("click", hSong);
+
+function hArtist(){
+    if(document.getElementById("artistOutput").className !== "horizontal"){
+        document.getElementById("artistOutput").classList.add("horizontal");
+    }
+    artistSortFunc();
+};
+
+let btnHartist = document.getElementById("hsortArtist").addEventListener("click", hArtist);
+
+function hAlbum(){
+    if(document.getElementById("albumOutput").className !== "horizontal"){
+        document.getElementById("albumOutput").classList.add("horizontal");
+    }
+    albumSortFunc();
+};
+
+let btnHalbum = document.getElementById("hsortAlbum").addEventListener("click", hAlbum);
