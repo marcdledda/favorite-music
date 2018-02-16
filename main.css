@@ -1,3 +1,3 @@
 .horizontal {
-    background-color: red;
+    display: flex;
 }
